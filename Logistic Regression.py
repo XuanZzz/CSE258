@@ -57,9 +57,7 @@ X_train = X[:len( X)/2]
 y_train = y[:len(y)/2]
 X_test = X[len(X)/2:]
 y_test = y[len(y)/2:]
-# If we wanted to split with a validation set:
-#X_valid = X[len(X)/2:3*len(X)/4]
-#X_test = X[3*len(X)/4:]
+
 
 # Use a library function to run gradient descent (or you can implement yourself!)
 theta,l,info = scipy.optimize.fmin_l_bfgs_b(f, [0]*len(X[0]), fprime, args = (X_train, y_train, 1.0))
